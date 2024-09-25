@@ -4,12 +4,13 @@ import { useEffect, useState } from "react";
 const Student = () => {
   const [studentId, setId] = useState("");
   const [studentName, setStudentName] = useState("");
+  const [teacherName, setTeacherName] = useState("");
   const [address, setAddress] = useState("");
   const [mobile, setMobile] = useState("");
   const [status, setStatus] = useState("");
   const [students, setStudents] = useState([]);
-  const [isEditing, setIsEditing] = useState(false); // New state variable for edit mode
-  
+  const [isEditing, setIsEditing] = useState(false); 
+
   useEffect(() => {
     (async () => await Load())();
   }, []);
@@ -25,6 +26,7 @@ const Student = () => {
     try {
       await axios.post("http://localhost:8089/api/v1/student/save", {
         studentName: studentName,
+        teacherName: teacherName,
         address: address,
         mobile: mobile,
         status: status
@@ -39,11 +41,12 @@ const Student = () => {
 
   async function editStudent(student) {
     setStudentName(student.studentName);
+    setTeacherName(student.teacherName);
     setAddress(student.address);
     setMobile(student.mobile);
     setStatus(student.status);
     setId(student.studentId);
-    setIsEditing(true); // Set edit mode to true
+    setIsEditing(true);
   }
 
   async function DeleteStudent(studentId) {
@@ -58,6 +61,7 @@ const Student = () => {
       await axios.put("http://localhost:8089/api/v1/student/update", {
         studentId: studentId,
         studentName: studentName,
+        teacherName: teacherName,
         address: address,
         mobile: mobile,
         status: status
@@ -73,10 +77,11 @@ const Student = () => {
   function resetForm() {
     setId("");
     setStudentName("");
+    setTeacherName("");
     setAddress("");
     setMobile("");
     setStatus("");
-    setIsEditing(false); // Reset edit mode
+    setIsEditing(false); 
   }
 
   return (
@@ -96,6 +101,14 @@ const Student = () => {
             id="studentname"
             value={studentName}
             onChange={(event) => setStudentName(event.target.value)}
+          />
+          <input
+            type="text"
+            className="w-full border-b-2 border-zinc-800 py-3 pl-2 focus:outline-none hover:border-blue-500 focus:border-blue-500 rounded"
+            placeholder="Teacher Name"
+            id="teachername"
+            value={teacherName}
+            onChange={(event) => setTeacherName(event.target.value)}
           />
           <input
             type="text"
@@ -142,6 +155,7 @@ const Student = () => {
             <tr>
               <th scope="col" className="px-6 py-3 text-center">No</th>
               <th scope="col" className="px-6 py-3">Student Name</th>
+              <th scope="col" className="px-6 py-3">Teacher Name</th>
               <th scope="col" className="px-6 py-3">Address</th>
               <th scope="col" className="px-6 py-3">Mobile</th>
               <th scope="col" className="px-6 py-3">Action</th>
@@ -163,6 +177,9 @@ const Student = () => {
                   </td>
                   <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {student.studentName}
+                  </td>
+                  <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {student.teacherName}
                   </td>
                   <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {student.address}
