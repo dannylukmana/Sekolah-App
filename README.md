@@ -5,16 +5,13 @@ This application is a school management system supporting CRUD (Create, Read, Up
 ## Features
 
 1. **Student Registration**  
-   Enable adding new student data with necessary fields such as name, address, and contact information.
+   Enable adding new student data with necessary fields such as name, teacher, address, and contact information.
 
 2. **Student Data Management**  
    Allow viewing, editing, and deleting student details to ensure accurate and up-to-date records.
 
 3. **Dashboard Overview**  
-   Display a summary of key school data, including the total number of students, active classes, and other essential information.
-
-4. **Search & Filter**  
-   Implement a search and filter feature within the student management system to quickly locate specific students based on criteria like name, address, and contact information.
+   Display a summary of students, and other essential information.
 
 ## Technologies Used
 
