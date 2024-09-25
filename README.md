@@ -70,3 +70,51 @@ This application is a school management system supporting CRUD (Create, Read, Up
 8. Run the Frontend : 
    ```bash
    npm run dev
+
+# Student Management API
+
+This API allows you to manage student records with the following operations: create, read, update, and delete (CRUD).
+
+## Base URL
+`http://localhost:8089/api/v1`
+
+## Endpoints
+
+### 1. Create Student
+
+- **Method:** `POST`
+- **Endpoint:** `/student/save`
+  
+**Request Body:**
+```json
+{
+    "studentName": "Danny",
+    "address": "Jalan Yuk",
+    "mobile": "0099",
+    "active": "true"
+}
+```
+### 2. Get All Students
+
+- **Method:** `GET`
+- **Endpoint:** `/student/getAllStudents`
+### 3. Get All Students
+
+- **Method:** `PUT`
+- **Endpoint:** `/student/update`
+  
+**Request Body:**
+```json
+{
+    "studentId": 2,
+    "studentName": "Dassnny",
+    "address": "Jalan Ysssuk",
+    "mobile": "0099",
+    "active": "true"
+}
+```
+### 4. Delete
+
+- **Method:** `PUT`
+- **Endpoint:** `/student/deletestudentid/{id}`
+
