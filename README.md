@@ -98,7 +98,7 @@ This API allows you to manage student records with the following operations: cre
 
 - **Method:** `GET`
 - **Endpoint:** `/student/getAllStudents`
-### 3. Get All Students
+### 3. Update Students
 
 - **Method:** `PUT`
 - **Endpoint:** `/student/update`
