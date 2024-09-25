@@ -24,7 +24,8 @@ public class StudentIMPL implements StudentService {
                 studentSaveDTO.getStudentName(),
                 studentSaveDTO.getAddress(),
                 studentSaveDTO.getMobile(),
-                studentSaveDTO.isActive()
+                studentSaveDTO.isActive(),
+                studentSaveDTO.getTeacherName()
         );
         studentRepository.save(student);
         return "Student added: " + student.getStudentName();
@@ -36,6 +37,7 @@ public class StudentIMPL implements StudentService {
                 .map(s -> new StudentDTO(
                         s.getStudentId(),
                         s.getStudentName(),
+                        s.getTeacherName(),
                         s.getAddress(),
                         s.getMobile(),
                         s.isActive()
@@ -52,6 +54,7 @@ public class StudentIMPL implements StudentService {
                 student.setAddress(studentUpdateDTO.getAddress());
                 student.setMobile(studentUpdateDTO.getMobile());
                 student.setActive(studentUpdateDTO.isActive());
+                student.setTeacherName(studentUpdateDTO.getTeacherName());
                 studentRepository.save(student);
                 return "Student updated successfully";
             }

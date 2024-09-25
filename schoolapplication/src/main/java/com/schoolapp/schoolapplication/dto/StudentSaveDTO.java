@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 
 public class StudentSaveDTO {
     private String studentName;
+    private String teacherName;
     private String address;
     private int  mobile;
     private boolean  active;

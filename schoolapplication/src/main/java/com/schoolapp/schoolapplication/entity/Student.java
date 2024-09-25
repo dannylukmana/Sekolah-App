@@ -13,26 +13,42 @@ public class Student {
     private String studentName;
     @Column(name="address",length = 100)
     private String address;
+    @Column(name="teacher_name",length = 100)
+    private String teacherName;
     @Column(name="mobile",length = 100)
     private int  mobile;
     @Column(name="active",columnDefinition = "TINYINT default 1")
     private boolean  active;
 
-    public Student(int studentId, String studentName, String address, int mobile, boolean active) {
+    public Student(int studentId, String studentName, String teacherName, String address, int mobile, boolean active) {
         this.studentId = studentId;
         this.studentName = studentName;
         this.address = address;
         this.mobile = mobile;
         this.active = active;
+        this.teacherName = teacherName;
     }
-    public Student (String studentname, String address, int mobile, boolean active) {
-        this.studentName = studentname;
+
+    public Student(String studentName, String address, int mobile, boolean active, String teacherName) {
+        this.studentName = studentName;
         this.address = address;
         this.mobile = mobile;
         this.active = active;
+        this.teacherName = teacherName;
     }
+
     public Student() {
+
     }
+
+    public String getTeacherName() {
+        return teacherName;
+    }
+
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
+
     public int getStudentId() {
         return studentId;
     }
@@ -68,6 +84,7 @@ public class Student {
         return "Student{" +
                 "studentid=" + studentId +
                 ", studentname='" + studentName + '\'' +
+                ", teachername='" + teacherName + '\'' +
                 ", address='" + address + '\'' +
                 ", mobile=" + mobile +
                 ", active=" + active +
