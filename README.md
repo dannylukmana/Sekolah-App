@@ -1,6 +1,6 @@
 # School Application - CRUD System
 
-This application is a school management system supporting CRUD (Create, Read, Update, Delete) features to manage data such as students, teachers, and classes. The backend is developed using **Java Spring Boot**, and the frontend is built with **React + Vite**. **MySQL** is used as the database to store all application data.
+This application is a school management system supporting CRUD (Create, Read, Update, Delete) features to manage data such as students, teachers, and classes. The backend is developed using **Java Spring Boot**, and the frontend is built with React + Vite. MySQL is used as the database to store all application data, with API connections facilitating seamless communication between the backend and frontend.
 
 ## Features
 
