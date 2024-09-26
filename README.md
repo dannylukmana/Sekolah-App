@@ -4,17 +4,7 @@ This application is a school management system supporting CRUD (Create, Read, Up
 
 ## Features
 
-1. **Student Registration**  
-   Enable adding new student data with necessary fields such as name, address, and contact information.
-
-2. **Student Data Management**  
-   Allow viewing, editing, and deleting student details to ensure accurate and up-to-date records.
-
-3. **Dashboard Overview**  
-   Display a summary of key school data, including the total number of students, active classes, and other essential information.
-
-4. **Search & Filter**  
-   Implement a search and filter feature within the student management system to quickly locate specific students based on criteria like name, address, and contact information.
+The **Student Registration** feature enables the addition of new student data by providing necessary fields such as name, assigned teacher, address, and contact information. The Student Data Management feature allows users to **create**, **view**, **edit**, and **delete** student details, ensuring that records remain accurate and up to date. Additionally, the Dashboard Overview provides a summary of students and other essential information, offering a clear snapshot of key metrics for quick reference.
 
 ## Technologies Used
 
@@ -117,4 +107,18 @@ This API allows you to manage student records with the following operations: cre
 
 - **Method:** `PUT`
 - **Endpoint:** `/student/deletestudentid/{id}`
+
+### Documentation
+**Create a Student**
+![School App - Google Chrome 2024-09-26 13-44-37](https://github.com/user-attachments/assets/3d0fc153-92f3-4f26-a094-5b64f763d65d)
+
+
+**View a Student**
+![image](https://github.com/user-attachments/assets/b8d9fba7-6848-4a43-a7de-bcf09836cf7d)
+
+**Edit/Update a Student**
+![School App - Google Chrome 2024-09-26 13-44-37 (1)](https://github.com/user-attachments/assets/8fbab89f-e3f9-4f36-81e8-bad662c27aba)
+
+**Delete a Student**
+![School App - Google Chrome 2024-09-26 13-55-19](https://github.com/user-attachments/assets/f0182932-28e1-4c5d-84ad-0bf839591a84)
 
