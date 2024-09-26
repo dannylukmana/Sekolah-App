@@ -8,13 +8,13 @@ The **Student Registration** feature enables the addition of new student data by
 
 ## Technologies Used
 
-### Backend:
+### Backend:  [sekolahapp-backend](/sekolahapp-backend)
 - **Java Spring Boot**: To build the RESTful API that handles application logic and database communication.
 - **Spring Data JPA**: For database interactions.
 - **Spring Security**: For authentication and authorization features (optional).
 - **MySQL**: The database used to store school data.
 
-### Frontend:
+### Frontend: [sekolahapp-frontend](/sekolahapp-frontend)
 - **React**: To build an interactive user interface.
 - **Vite**: A modern development tool used to build and run the frontend project.
 - **Axios**: To communicate with the backend via API.
