@@ -33,7 +33,7 @@ The **Student Registration** feature enables the addition of new student data by
 1. Clone this repository:
    ```bash
    git clone https://github.com/dannylukmana/Sekolah-App.git
-   cd schoolapplication
+   cd sekolahapp-backend
 2. Create a MySQL database and adjust the configuration in the `application.properties` file:
    ```bash
    spring.datasource.url=jdbc:mysql://localhost:3306/schoolapp
@@ -47,7 +47,7 @@ The **Student Registration** feature enables the addition of new student data by
 ### Frontend (React + Vite)
 4. Navigate to the frontend application:
    ```bash
-   cd my-school
+   cd sekolahapp-frontend
 5. Install frontend dependencies:
    ```bash
    npm install
