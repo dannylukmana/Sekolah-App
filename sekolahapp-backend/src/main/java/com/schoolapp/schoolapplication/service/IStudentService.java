@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Interface for managing student operations.
  */
-public interface StudentService {
+public interface IStudentService {
     /**
      * Adds a new student.
      * @param studentSaveDTO the data transfer object containing student information

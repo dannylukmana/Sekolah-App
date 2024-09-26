@@ -3,7 +3,7 @@ package com.schoolapp.schoolapplication.controller;
 import com.schoolapp.schoolapplication.dto.StudentDTO;
 import com.schoolapp.schoolapplication.dto.StudentSaveDTO;
 import com.schoolapp.schoolapplication.dto.StudentUpdateDTO;
-import com.schoolapp.schoolapplication.service.StudentService;
+import com.schoolapp.schoolapplication.service.IStudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,27 +15,27 @@ import java.util.List;
 public class StudentController {
 
     @Autowired
-    private StudentService studentService;
+    private IStudentService IStudentService;
 
     @PostMapping(path = "/save")
     public String saveStudent(@RequestBody StudentSaveDTO studentSaveDTO)
     {
-        return studentService.addStudent(studentSaveDTO);
+        return IStudentService.addStudent(studentSaveDTO);
     }
 
     @GetMapping(path = "/getAllStudents")
     public List<StudentDTO> getAllStudent() {
-        return studentService.getAllStudents();
+        return IStudentService.getAllStudents();
     }
 
     @PutMapping("/update")
     public String updateStudent(@RequestBody StudentUpdateDTO studentUpdateDTO) {
-        return studentService.updateStudent(studentUpdateDTO);
+        return IStudentService.updateStudent(studentUpdateDTO);
     }
 
     @DeleteMapping("/deletestudentid/{id}")
     public String deleteStudent(@PathVariable int id) {
-        boolean isDeleted = studentService.deleteStudent(id);
+        boolean isDeleted = IStudentService.deleteStudent(id);
         return isDeleted ? "Student deleted successfully!" : "Student ID does not exist.";
     }
 

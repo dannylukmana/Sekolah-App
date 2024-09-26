@@ -1,11 +1,10 @@
-package com.schoolapp.schoolapplication.service.IMPL;
+package com.schoolapp.schoolapplication.service;
 
 import com.schoolapp.schoolapplication.dto.StudentDTO;
 import com.schoolapp.schoolapplication.dto.StudentSaveDTO;
 import com.schoolapp.schoolapplication.dto.StudentUpdateDTO;
 import com.schoolapp.schoolapplication.entity.Student;
 import com.schoolapp.schoolapplication.repository.StudentRepository;
-import com.schoolapp.schoolapplication.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,7 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class StudentIMPL implements StudentService {
+public class StudentService implements IStudentService {
     @Autowired
     private StudentRepository studentRepository;;
 
