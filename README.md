@@ -110,7 +110,8 @@ This API allows you to manage student records with the following operations: cre
 
 ### Documentation
 **Create a Student**
-![Uploading School App - Google Chrome 2024-09-26 13-44-37.gif…]()
+![School App - Google Chrome 2024-09-26 13-44-37](https://github.com/user-attachments/assets/3d0fc153-92f3-4f26-a094-5b64f763d65d)
+
 
 **View a Student**
 ![image](https://github.com/user-attachments/assets/b8d9fba7-6848-4a43-a7de-bcf09836cf7d)
